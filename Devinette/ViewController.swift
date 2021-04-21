@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var message: UILabel!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var titre: UILabel!
     @IBOutlet weak var bouton: UIButton!
@@ -35,24 +36,38 @@ class ViewController: UIViewController {
     
     @IBAction func jouer(_ sender: Any) {
     
-       count = count + 1
-        
-        if Int(input.text!) == random {
-             let alertVC = UIAlertController(title: "Winner", message: "vous gagnez le jeu apres \(count) essai", preferredStyle: .alert)
-            alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            present(alertVC, animated: true, completion: nil)
+        if bouton.titleLabel?.text == "Restart" {
+            restartGame()
+        }else{
+           count = count + 1
             
-        }
-        else if Int(input.text!)! < random {
-             let alertVC = UIAlertController(title: "petite", message: "la valeur est inferieur au random", preferredStyle: .alert)
-            alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            present(alertVC, animated: true, completion: nil)
-            
-        }else if Int(input.text!)! > random {
-             let alertVC = UIAlertController(title: "grande", message: "la valeur est superieur au random", preferredStyle: .alert)
-            alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            present(alertVC, animated: true, completion: nil)
-            
+            if Int(input.text!) == random {
+                message.textColor = UIColor.green
+                message.text = "vous gagnez le jeu apres \(count) essai"
+                //**
+                restartEffet()
+                //**
+                 let alertVC = UIAlertController(title: "Winner", message: "vous gagnez le jeu apres \(count) essai", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alertVC, animated: true, completion: nil)
+                
+            }
+            else if Int(input.text!)! < random {
+                message.text = "Entrez une Valeur superieur a [\(input.text!)]"
+                 /*
+                 let alertVC = UIAlertController(title: "petite", message: "la valeur est inferieur au random", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alertVC, animated: true, completion: nil)
+                */
+            }else if Int(input.text!)! > random {
+                message.text = "Entrez une Valeur inferieur a [\(input.text!)]"
+                /*
+                 let alertVC = UIAlertController(title: "grande", message: "la valeur est superieur au random", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alertVC, animated: true, completion: nil)
+                 */
+                
+            }
         }
         
     }
@@ -66,7 +81,7 @@ class ViewController: UIViewController {
             titre.textColor = UIColor.white
             label.textColor = UIColor.white
         }else{
-            backgroundService.color = "black"
+            backgroundService.color = "white"
             view.backgroundColor = UIColor.white
             bouton.backgroundColor = UIColor.black
             bouton.titleLabel?.textColor = UIColor.white
@@ -97,5 +112,24 @@ class ViewController: UIViewController {
            }
         
     }
+    
+    func restartEffet(){
+        //fonction qui permer de modifier le bouton en cas de succes
+        bouton.backgroundColor = UIColor.green
+        bouton.setTitle("Restart", for: .normal)
+        
+    }
+    
+    
+    //restart game
+    func restartGame(){
+        bouton.setTitle("Jouer", for: .normal)
+        message.text = ""
+        initialiserMode()
+        random = Int(arc4random_uniform(10))
+        count = 0
+    }
+    
+    
 }
 

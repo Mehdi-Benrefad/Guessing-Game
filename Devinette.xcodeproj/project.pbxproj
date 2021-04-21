@@ -16,6 +16,7 @@
 		4F030BBC262DDFCD0068FFFA /* DevinetteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F030BBB262DDFCD0068FFFA /* DevinetteTests.swift */; };
 		4F030BC7262DDFCD0068FFFA /* DevinetteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F030BC6262DDFCD0068FFFA /* DevinetteUITests.swift */; };
 		4F60019A26308A1900191EDB /* backgroundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60019926308A1900191EDB /* backgroundService.swift */; };
+		4FF597432630BA6100C59E47 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4FF597422630BA6000C59E47 /* Balham.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4F030BC6262DDFCD0068FFFA /* DevinetteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevinetteUITests.swift; sourceTree = "<group>"; };
 		4F030BC8262DDFCD0068FFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F60019926308A1900191EDB /* backgroundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundService.swift; sourceTree = "<group>"; };
+		4FF597422630BA6000C59E47 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Balham.otf; path = ../../../Balham.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				4F030BA8262DDFB90068FFFA /* ViewController.swift */,
 				4F030BAA262DDFB90068FFFA /* Main.storyboard */,
 				4F030BAD262DDFCD0068FFFA /* Assets.xcassets */,
+				4FF597422630BA6000C59E47 /* Balham.otf */,
 				4F60019926308A1900191EDB /* backgroundService.swift */,
 				4F030BAF262DDFCD0068FFFA /* LaunchScreen.storyboard */,
 				4F030BB2262DDFCD0068FFFA /* Info.plist */,
@@ -237,6 +240,7 @@
 			files = (
 				4F030BB1262DDFCD0068FFFA /* LaunchScreen.storyboard in Resources */,
 				4F030BAE262DDFCD0068FFFA /* Assets.xcassets in Resources */,
+				4FF597432630BA6100C59E47 /* Balham.otf in Resources */,
 				4F030BAC262DDFB90068FFFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
