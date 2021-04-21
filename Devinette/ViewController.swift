@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         random = Int(arc4random_uniform(10))
         // Do any additional setup after loading the view.
+        bouton.layer.cornerRadius=25.0
+        //**
         input.backgroundColor = UIColor.white
         //on initialise lemode et les couleurs
             initialiserMode()
