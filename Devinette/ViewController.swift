@@ -125,6 +125,7 @@ class ViewController: UIViewController {
     func restartGame(){
         bouton.setTitle("Jouer", for: .normal)
         message.text = ""
+        message.textColor = UIColor.red
         initialiserMode()
         random = Int(arc4random_uniform(10))
         count = 0
