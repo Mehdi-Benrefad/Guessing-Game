@@ -15,6 +15,7 @@
 		4F030BB1262DDFCD0068FFFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F030BAF262DDFCD0068FFFA /* LaunchScreen.storyboard */; };
 		4F030BBC262DDFCD0068FFFA /* DevinetteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F030BBB262DDFCD0068FFFA /* DevinetteTests.swift */; };
 		4F030BC7262DDFCD0068FFFA /* DevinetteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F030BC6262DDFCD0068FFFA /* DevinetteUITests.swift */; };
+		4F60019A26308A1900191EDB /* backgroundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60019926308A1900191EDB /* backgroundService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4F030BC2262DDFCD0068FFFA /* DevinetteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevinetteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F030BC6262DDFCD0068FFFA /* DevinetteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevinetteUITests.swift; sourceTree = "<group>"; };
 		4F030BC8262DDFCD0068FFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F60019926308A1900191EDB /* backgroundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				4F030BA8262DDFB90068FFFA /* ViewController.swift */,
 				4F030BAA262DDFB90068FFFA /* Main.storyboard */,
 				4F030BAD262DDFCD0068FFFA /* Assets.xcassets */,
+				4F60019926308A1900191EDB /* backgroundService.swift */,
 				4F030BAF262DDFCD0068FFFA /* LaunchScreen.storyboard */,
 				4F030BB2262DDFCD0068FFFA /* Info.plist */,
 			);
@@ -262,6 +265,7 @@
 				4F030BA9262DDFB90068FFFA /* ViewController.swift in Sources */,
 				4F030BA5262DDFB90068FFFA /* AppDelegate.swift in Sources */,
 				4F030BA7262DDFB90068FFFA /* SceneDelegate.swift in Sources */,
+				4F60019A26308A1900191EDB /* backgroundService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
