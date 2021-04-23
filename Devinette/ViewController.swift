@@ -60,7 +60,7 @@ class ViewController: UIViewController {
             
             count = count + 1
             
-            if Int(input.text!) == random {
+            if inp == random {
                 message.textColor = UIColor.green
                 message.text = "vous gagnez le jeu apres \(count) essai"
                 //**
@@ -71,15 +71,15 @@ class ViewController: UIViewController {
                 present(alertVC, animated: true, completion: nil)
                 
             }
-            else if Int(input.text!)! < random {
-                message.text = "Entrez une Valeur superieur a [\(input.text!)]"
+            else if inp < random {
+                message.text = "Entrez une Valeur superieur a [\(inp)]"
                  /*
                  let alertVC = UIAlertController(title: "petite", message: "la valeur est inferieur au random", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 present(alertVC, animated: true, completion: nil)
                 */
-            }else if Int(input.text!)! > random {
-                message.text = "Entrez une Valeur inferieur a [\(input.text!)]"
+            }else if inp > random {
+                message.text = "Entrez une Valeur inferieur a [\(inp)]"
                 /*
                  let alertVC = UIAlertController(title: "grande", message: "la valeur est superieur au random", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
