@@ -41,7 +41,24 @@ class ViewController: UIViewController {
         if bouton.titleLabel?.text == "Restart" {
             restartGame()
         }else{
-           count = count + 1
+           
+            guard let inp = Int(input.text!)  else {
+                let alertVC = UIAlertController(title: "Erreur", message: "vous devez entrer un entier", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                present(alertVC, animated: true, completion: nil)
+                return
+            }
+            
+            
+             let inp2 = Int(input.text!)!
+             guard  inp2 > -1  , inp2 < 10 else {
+                           let alertVC = UIAlertController(title: "Warning", message: "vous devez entrer un entier compris entre 0 et 9", preferredStyle: .alert)
+                           alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                           present(alertVC, animated: true, completion: nil)
+                           return
+            }
+            
+            count = count + 1
             
             if Int(input.text!) == random {
                 message.textColor = UIColor.green
@@ -49,7 +66,7 @@ class ViewController: UIViewController {
                 //**
                 restartEffet()
                 //**
-                 let alertVC = UIAlertController(title: "Winner", message: "vous gagnez le jeu apres \(count) essai", preferredStyle: .alert)
+                let alertVC = UIAlertController(title: "Winner", message: "vous gagnez le jeu apres \(count) essai", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 present(alertVC, animated: true, completion: nil)
                 
@@ -131,6 +148,7 @@ class ViewController: UIViewController {
         initialiserMode()
         random = Int(arc4random_uniform(10))
         count = 0
+        input.text=""
     }
     
     
