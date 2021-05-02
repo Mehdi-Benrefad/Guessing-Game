@@ -39,54 +39,57 @@ class ViewController: UIViewController {
     @IBAction func jouer(_ sender: Any) {
     
         if bouton.titleLabel?.text == "Restart" {
+            
             restartGame()
+            
         }else{
            
-            guard let inp = Int(input.text!)  else {
-                let alertVC = UIAlertController(title: "Erreur", message: "vous devez entrer un entier", preferredStyle: .alert)
-                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                present(alertVC, animated: true, completion: nil)
-                return
-            }
-            
-            
-             let inp2 = Int(input.text!)!
-             guard  inp2 > -1  , inp2 < 10 else {
-                           let alertVC = UIAlertController(title: "Warning", message: "vous devez entrer un entier compris entre 0 et 9", preferredStyle: .alert)
-                           alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                           present(alertVC, animated: true, completion: nil)
-                           return
-            }
-            
-            count = count + 1
-            
-            if inp == random {
-                message.textColor = UIColor.green
-                message.text = "vous gagnez le jeu apres \(count) essai"
-                //**
-                restartEffet()
-                //**
-                let alertVC = UIAlertController(title: "Winner", message: "vous gagnez le jeu apres \(count) essai", preferredStyle: .alert)
-                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                present(alertVC, animated: true, completion: nil)
+                guard let inp = Int(input.text!)  else {
+                    let alertVC = UIAlertController(title: "Erreur", message: "vous devez entrer un entier", preferredStyle: .alert)
+                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    present(alertVC, animated: true, completion: nil)
+                    return
+                }
                 
-            }
-            else if inp < random {
-                message.text = "Entrez une Valeur superieur a [\(inp)]"
-                 /*
-                 let alertVC = UIAlertController(title: "petite", message: "la valeur est inferieur au random", preferredStyle: .alert)
-                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                present(alertVC, animated: true, completion: nil)
-                */
-            }else if inp > random {
-                message.text = "Entrez une Valeur inferieur a [\(inp)]"
-                /*
-                 let alertVC = UIAlertController(title: "grande", message: "la valeur est superieur au random", preferredStyle: .alert)
-                alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                present(alertVC, animated: true, completion: nil)
-                 */
                 
-            }
+                 let inp2 = Int(input.text!)!
+                 guard  inp2 > -1  , inp2 < 10 else {
+                               let alertVC = UIAlertController(title: "Warning", message: "vous devez entrer un entier compris entre 0 et 9", preferredStyle: .alert)
+                               alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                               present(alertVC, animated: true, completion: nil)
+                               return
+                }
+            
+            
+                count = count + 1
+            
+                if inp == random {
+                    message.textColor = UIColor.green
+                    message.text = "vous gagnez le jeu apres \(count) essai"
+                    //**
+                    restartEffet()
+                    //**
+                    let alertVC = UIAlertController(title: "Winner", message: "vous gagnez le jeu apres \(count) essai", preferredStyle: .alert)
+                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    present(alertVC, animated: true, completion: nil)
+                
+                }
+                else if inp < random {
+                    message.text = "Entrez une Valeur superieur a [\(inp)]"
+                     /*
+                     let alertVC = UIAlertController(title: "petite", message: "la valeur est inferieur au random", preferredStyle: .alert)
+                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    present(alertVC, animated: true, completion: nil)
+                    */
+                }else if inp > random {
+                    message.text = "Entrez une Valeur inferieur a [\(inp)]"
+                    /*
+                     let alertVC = UIAlertController(title: "grande", message: "la valeur est superieur au random", preferredStyle: .alert)
+                    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    present(alertVC, animated: true, completion: nil)
+                     */
+                    
+                }
         }
         
     }

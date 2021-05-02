@@ -103,14 +103,13 @@
 		4F030BA3262DDFB90068FFFA /* Devinette */ = {
 			isa = PBXGroup;
 			children = (
+				4F2AF66A263E32C70065E6A6 /* Model */,
+				4F2AF66B263E32F70065E6A6 /* Controller */,
+				4F2AF66C263E330B0065E6A6 /* View */,
 				4F030BA4262DDFB90068FFFA /* AppDelegate.swift */,
 				4F030BA6262DDFB90068FFFA /* SceneDelegate.swift */,
-				4F030BA8262DDFB90068FFFA /* ViewController.swift */,
-				4F030BAA262DDFB90068FFFA /* Main.storyboard */,
 				4F030BAD262DDFCD0068FFFA /* Assets.xcassets */,
 				4FF597422630BA6000C59E47 /* Balham.otf */,
-				4F60019926308A1900191EDB /* backgroundService.swift */,
-				4F030BAF262DDFCD0068FFFA /* LaunchScreen.storyboard */,
 				4F030BB2262DDFCD0068FFFA /* Info.plist */,
 			);
 			path = Devinette;
@@ -132,6 +131,31 @@
 				4F030BC8262DDFCD0068FFFA /* Info.plist */,
 			);
 			path = DevinetteUITests;
+			sourceTree = "<group>";
+		};
+		4F2AF66A263E32C70065E6A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F60019926308A1900191EDB /* backgroundService.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4F2AF66B263E32F70065E6A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F030BA8262DDFB90068FFFA /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4F2AF66C263E330B0065E6A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F030BAA262DDFB90068FFFA /* Main.storyboard */,
+				4F030BAF262DDFCD0068FFFA /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
