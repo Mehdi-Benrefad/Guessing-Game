@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         //**
         input.backgroundColor = UIColor.white
         //on initialise lemode et les couleurs
-            initialiserMode()
+        initialiserMode()
         }
 
     //on change la couleur de background et on modifie la variable dans user default
@@ -76,13 +76,15 @@ class ViewController: UIViewController {
                 }
                 else if inp < random {
                     message.text = "Entrez une Valeur superieur a [\(inp)]"
-                     /*
+                    input.text=""
+                    /*
                      let alertVC = UIAlertController(title: "petite", message: "la valeur est inferieur au random", preferredStyle: .alert)
                     alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                     present(alertVC, animated: true, completion: nil)
                     */
                 }else if inp > random {
                     message.text = "Entrez une Valeur inferieur a [\(inp)]"
+                    input.text=""
                     /*
                      let alertVC = UIAlertController(title: "grande", message: "la valeur est superieur au random", preferredStyle: .alert)
                     alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))

@@ -86,6 +86,7 @@
                         <constraints>
                             <constraint firstItem="Mgc-Qv-696" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="0LG-s2-Ntk"/>
                             <constraint firstItem="MjM-1C-joy" firstAttribute="top" secondItem="6Jl-Vi-eJ2" secondAttribute="bottom" constant="8" id="0pe-iJ-6xn"/>
+                            <constraint firstItem="6Jl-Vi-eJ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xB-AW-i49"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vUF-ph-HQ6" secondAttribute="trailing" constant="41" id="7s1-BU-x7U"/>
                             <constraint firstItem="MjM-1C-joy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HLc-gl-vsN"/>
                             <constraint firstItem="6Jl-Vi-eJ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="Wss-tv-VWg"/>
